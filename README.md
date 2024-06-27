@@ -70,7 +70,7 @@ To run this mode, type:
 
 To run this mode, type:
 ```
- python3 TPS2TOPAS.py -m gui
+ python3 main.py -m gui
 ```
 
 A GUI will pop up and you will be able to select the required parameter from _Browse_ buttons, _dropdown menus_, and _text entries_ (see the figure below). To run the script, click on _Generate TOPAS files_.
