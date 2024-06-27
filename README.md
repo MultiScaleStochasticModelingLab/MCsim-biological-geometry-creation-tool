@@ -64,7 +64,7 @@ To run this mode, type:
 > Replace _TheNameOfYouInputFile.txt_ by the name of your input file.
 
 > [!TIP]
-> You can file an example of input file, called *inputfile_template*, in the repository.
+> You can file an example of input file, called *inputfile_template.txt*, in the repository.
 
 #### Mode 2: GUI.
 
