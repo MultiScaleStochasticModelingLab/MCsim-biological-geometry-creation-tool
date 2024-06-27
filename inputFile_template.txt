@@ -1,0 +1,11 @@
+/pathToDirectory/MySegmentationImage.format
+0.0
+No
+100,100
+50,75
+Yes
+2
+Yes
+15,1500
+TheNameOfMyCell
+MyFirstTest
