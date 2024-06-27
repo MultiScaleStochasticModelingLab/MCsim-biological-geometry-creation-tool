@@ -73,26 +73,21 @@ To run this mode, type:
  python3 main.py -m gui
 ```
 
-A GUI will pop up and you will be able to select the required parameter from _Browse_ buttons, _dropdown menus_, and _text entries_ (see the figure below). To run the script, click on _Generate TOPAS files_.
+A GUI will pop up and you will be able to select the required parameter from _Browse_ buttons, _dropdown menus_, and _text entries_ (see the figure below). To run the script, click on _Run_.
 
-<img src="Images/GUI_example.png" alt="drawing" width="50%"/>
+<img src="Images/GUI.png" alt="drawing" width="50%"/>
 
 > [!WARNING]
 > This mode requires the installation of the _tkinter_ python library.
 
 > [!NOTE]
-> In both modes, if the information is not correct, _ERROR_ messages will appear in the terminal window and the PCF will not be created.
+> In both modes, if the information is not correct, _ERROR_ messages will appear in the terminal window and the geometries will not be generated.
 
-If the required information is correct, PCF files will be created in a directory with the name of the _Project name_ specified. 
+If the required information is correct, PIF and ImageCube files will be created in a directory with the name of the _Project name_ specified. 
 
 > [!NOTE]
-> TPS2TOPAS may use default values if some of the information is missing. Please check for _WARNING_ messages in the terminal window.
+> The tool may use default values if some of the information is missing. Please check the used parameters printed in the terminal window.
 
-## ... and to run the PCF in TOPAS
-Once the PCF are created you will be able to run them with TOPAS. The PCF to run is called _Main.txt_. Just for visualization, you can run *Main_with_Visualization.txt*, but we strongly DO NOT recommend to run this file for the whole simulation.
-
-For instructions on how to run TOPAS, please see the user guide of TOPAS (opentopas.github.io).
 
 > [!TIP]
-> We recommend to run several of the PHSP provided by Varian and combine the results for better statistics. To run the same simulation with different PHSP files, in the _Main.txt" TOPAS file, replace the name of the current path to the PHSP file in the command named s:So/phsp/PhaseSpaceFileName_ by the new PHSP filename.
-
+> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. 
