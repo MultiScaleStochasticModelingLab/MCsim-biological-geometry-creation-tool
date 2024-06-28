@@ -492,7 +492,6 @@ if doCluster:
 
 	os.system("g++ -o runCluster runCluster.cpp")
 	os.system("./runCluster")
-	os.system("rm pifToCluster.pif")
 
 	print("\t done!")
 
