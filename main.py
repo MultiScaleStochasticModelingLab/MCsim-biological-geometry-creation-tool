@@ -135,7 +135,6 @@ if mode == 'file':
 		cropOrigin	 		= np.array([eval(i) for i in cropOriginTemp])
 		resizeFactor 		= float(inputInfo[6])
 		inputCellVolume = list(inputInfo[8].split(","))
-		#exit(1)
 		if inputCellVolume == "": 
 			maxCellVolume = float('inf')
 			minCellVolume = 2
@@ -460,10 +459,10 @@ if doResize:
 	print("\nPerforming resizing...")
 	outFileName = outFileName + "_resized_a_factor_" + str(round(1/resizeFactor,1))
 	if hmDim == 2:
-		data = resize2D(data,resizeFactor)
+		data = resize2D(data,resizeFactor,segmentationThreshold)
 		createPIFfile2D(data,outDirectory + "/" + outFileName,0,outCellName) # data normalized to 1 or 0
 	if hmDim == 3:
-		data = resize3D(data,resizeFactor)
+		data = resize3D(data,resizeFactor,segmentationThreshold)
 		createPIFfile3D(data,outDirectory + "/" + outFileName,0,outCellName) # data normalized to 1 or 0
 	print("\t done!")
 
@@ -492,6 +491,7 @@ if doCluster:
 
 	os.system("g++ -o runCluster runCluster.cpp")
 	os.system("./runCluster")
+	os.system("rm pifToCluster.pif")
 
 	print("\t done!")
 

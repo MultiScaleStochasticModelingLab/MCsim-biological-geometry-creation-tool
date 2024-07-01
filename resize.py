@@ -2,17 +2,17 @@ import numpy as np
 from scipy.ndimage import zoom
 from scipy.signal import resample_poly
 
-def resize2D(data,resizeFactor):
+def resize2D(data,resizeFactor,segmentationThreshold):
 
 	resizeFactor = int(resizeFactor)
 
-	originalData = np.where(data > 0,1.0,0.0) # filled (1) or not filled (0)
+	originalData = np.where(data > segmentationThreshold,1.0,0.0) # filled (1) or not filled (0)
 	originalDataDim = np.shape(originalData)
 	dimensions = len(originalDataDim)
 
 	filledPixelsOriginal = np.count_nonzero(originalData > 0)
 	
-	print("------------------- OLD:", filledPixelsOriginal/(originalDataDim[0]*originalDataDim[1]))
+	#print("------------------- OLD:", filledPixelsOriginal/(originalDataDim[0]*originalDataDim[1]))
 
 
 	if resizeFactor > 0: #downsampling
@@ -44,16 +44,16 @@ def resize2D(data,resizeFactor):
 	filledPixelsOriginalResized = np.count_nonzero(newData > 0)
 
 
-	print("------------------- NEW:", filledPixelsOriginalResized/(newDataDim[0]*newDataDim[1]))
+	#print("------------------- NEW:", filledPixelsOriginalResized/(newDataDim[0]*newDataDim[1]))
 
 	return newData
 
 
-def resize3D(data,resizeFactor):
+def resize3D(data,resizeFactor,segmentationThreshold):
 
 	resizeFactor = int(resizeFactor)
 
-	originalData = np.where(data > 0,1.0,0.0) # filled (1) or not filled (0)
+	originalData = np.where(data > segmentationThreshold,1.0,0.0) # filled (1) or not filled (0)
 	originalDataDim = np.shape(originalData)
 	dimensions = len(originalDataDim)
 
