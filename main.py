@@ -269,7 +269,7 @@ if mode == 'gui':
 	################
 	i += 2
 	label9=StringVar()
-	label9.set('Maximum, minimum cluster volume (in pixels)')
+	label9.set('Minimum, maximum cluster volume (in pixels)')
 	lbl9 = Label(master=root, textvariable=label9)
 	lbl9.grid(row=i, column=1)
 	cellSize = StringVar()
