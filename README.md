@@ -90,4 +90,4 @@ If the required information is correct, PIF and ImageCube files will be created 
 
 
 > [!TIP]
-> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. 
+> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. See examples of biological images and respective times in _Link to publication missing_.
