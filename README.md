@@ -2,10 +2,12 @@
 
 This computational tool performs the clustering of voxels of biological segmentation images to create biological structures (e.g., cells and nuclei) based on user-defined parameters. In addition, it converts the information contained in the images into file formats that allow importing the geometries into software dedicated to the Monte Carlo simulation of radiation transport, i.e., [TOPAS](https://opentopas.github.io) and biological processes, i.e., CompuCell3D [CC3D](https://compucell3d.org). Overall, this tool aims to ease the use of realistic biological geometries in computational radiobiological studies.  
 
-This tool is described in the following publication: *Link to publication missing*
+This tool is described in the following publication: [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d)
 
 ## How to cite
-If the tool has been useful for your studies, please acknowledge its use by citing this work: *Citation missing*
+If the tool has been useful for your studies, please acknowledge its use by citing this work:
+
+Ortiz R and Ramos-Méndez J. A clustering tool for generating biological geometries for computational modeling in radiobiology. 2024 Phys. Med. Biol. 69 21NT01
 
 # Getting started
 
@@ -13,7 +15,7 @@ If the tool has been useful for your studies, please acknowledge its use by citi
 
 #### To use the clustering tool
 
-TPS2TOPAS interface is written in python3 (v3.11) and C++ (v.14). Thus, we recommend to install python (v3.8 or superior) and C++ (v.14) in your system following the instructions for their installation in your operting system, if you have not done it yet.
+This tool is written in python3 (v3.11) and C++ (v.14). Thus, we recommend to install python (v3.8 or superior) and C++ (v.14) in your system following the instructions for their installation in your operting system, if you have not done it yet.
 Alongside with python default libraries, this tool requires:
 
 - pydicom
@@ -90,4 +92,4 @@ If the required information is correct, PIF and ImageCube files will be created 
 
 
 > [!TIP]
-> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. See examples of biological images and respective times in _Link to publication missing_.
+> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. See examples of biological images and respective times at [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d).
