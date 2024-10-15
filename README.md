@@ -1,6 +1,6 @@
 # Clustering tool for computational modeling applications in radiobiology
 
-This computational tool performs the clustering of voxels of biological segmentation images to create biological structures (e.g., cells and nuclei) based on user-defined parameters. In addition, it converts the information contained in the images into file formats that allow importing the geometries into software dedicated to the Monte Carlo simulation of radiation transport, i.e., [TOPAS](https://opentopas.github.io) and biological processes, i.e., CompuCell3D [CC3D](https://compucell3d.org). Overall, this tool aims to ease the use of realistic biological geometries in computational radiobiological studies.  
+This computational tool performs the clustering of voxels of biological segmentation images to create biological structures (e.g., cells and nuclei) based on user-defined parameters. In addition, it converts the information contained in the images into file formats that allow importing the geometries into software dedicated to the Monte Carlo simulation of radiation transport ([TOPAS](https://opentopas.github.io)) and biological processes [CompuCell3D](https://compucell3d.org). Overall, this tool aims to ease the use of realistic biological geometries in computational radiobiological studies.  
 
 This tool is described in the following publication: [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d)
 
