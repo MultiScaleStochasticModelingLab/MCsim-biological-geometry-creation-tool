@@ -1,6 +1,6 @@
 # Clustering tool for computational modeling applications in radiobiology
 
-This computational tool performs the clustering of voxels of biological segmentation images to create biological structures (e.g., cells and nuclei) based on user-defined parameters. In addition, it converts the information contained in the images into file formats that allow importing the geometries into software dedicated to the Monte Carlo simulation of radiation transport ([TOPAS](https://opentopas.github.io)) and biological processes [CompuCell3D](https://compucell3d.org). Overall, this tool aims to ease the use of realistic biological geometries in computational radiobiological studies.  
+This computational tool performs the clustering of voxels of biological segmentation images to create biological structures (e.g., cells and nuclei) based on user-defined parameters. In addition, it converts the information contained in the images into file formats that allow importing the geometries into software dedicated to the Monte Carlo simulation of radiation transport ([TOPAS](https://opentopas.github.io)) and biological processes ([CompuCell3D](https://compucell3d.org)). Overall, this tool aims to ease the use of realistic biological geometries in computational radiobiological studies.  
 
 This tool is described in the following publication: [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d)
 
@@ -15,7 +15,7 @@ Ortiz R and Ramos-Méndez J. A clustering tool for generating biological geometr
 
 #### To use the clustering tool
 
-This tool is written in python3 (v3.11) and C++ (v.14). Thus, we recommend to install python (v3.8 or superior) and C++ (v.14) in your system following the instructions for their installation in your operting system, if you have not done it yet.
+This tool is written in python3 (v3.11) and C++ (v.14). Thus, we recommend to install python (v3.8 or superior) and C++ (v.14) in your system following the offical instructions for their installation in your operting system, if you have not done it yet.
 Alongside with python default libraries, this tool requires:
 
 - pydicom
@@ -50,12 +50,12 @@ It requires user input. Find a list of the information required:
 10.	The name of the clustered structure, e.g., Neuron.
 11.	Output directory.
 
-For a complete description of these parameters, please see the publication (*Link to publication missing*).
+For a complete description of these parameters, please see the publication [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d).
 
 This information can be input in two modes: via (1) input parameter file or (2) Graphical User Interface (GUI).
 
 #### Mode 1: input file parameter.
-In this mode a input text file with the user input informations is required. This file should contain 11 rows, each one with the information described above in the same order.
+In this mode, a input text file with the user input informations is required. This file should contain 11 rows, each one with the information described above in the same order.
 
 To run this mode, type:
 ```
@@ -66,7 +66,7 @@ To run this mode, type:
 > Replace _TheNameOfYouInputFile.txt_ by the name of your input file.
 
 > [!TIP]
-> You can file an example of input file, called *inputfile_template.txt*, in the repository.
+> You can find an example of input file, called *inputfile_template.txt*, in the repository.
 
 #### Mode 2: GUI.
 
@@ -92,4 +92,4 @@ If the required information is correct, PIF and ImageCube files will be created 
 
 
 > [!TIP]
-> The clustering process may be time consuming (from hours to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. See examples of biological images and respective times at [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d).
+> The clustering process may be time consuming (from minutes to days) for large images. We recommend to crop and resize the image (see commands above) to the region of interest and to minumum acceptable spatial resolution, respectively, for computation efficiency. See examples of biological images and recommendations to reduce the execution time at [https://dx.doi.org/10.1088/1361-6560/ad7f1d](https://dx.doi.org/10.1088/1361-6560/ad7f1d).
