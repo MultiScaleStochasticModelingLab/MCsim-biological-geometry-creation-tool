@@ -10,22 +10,26 @@ def createTOPASFiles(inFileName,outFileName,dimensions):
 		if cell[0] in cellID: continue
 		cellID.append(cell[0])
 
-	TOPASSocorerFile = open("TOPASScorerFile.txt",'w')
+	"""
+	TOPASScorerFile = open("TOPASScorerFile.txt",'w')
 	
-	TOPASSocorerFile.write('# scorers for each cell \n')
-	TOPASSocorerFile.write('####################### \n')
-	TOPASSocorerFile.write('# WARNING - replace "REPLACE_BY_Quantity" by a scoring quantity supported by TOPAS, e.g., "DoseToMedium" \n')
-	TOPASSocorerFile.write('####################### \n')
-	TOPASSocorerFile.write('s:Quantity_for_scoring = "REPLACE_BY_Quantity" \n')
+	TOPASScorerFile.write('# scorers for each cell \n')
+	TOPASScorerFile.write('####################### \n')
+	TOPASScorerFile.write('# WARNING - replace "REPLACE_BY_Quantity" by a scoring quantity supported by TOPAS, e.g., "DoseToMedium" \n')
+	TOPASScorerFile.write('####################### \n')
+	TOPASScorerFile.write('s:Quantity_for_scoring = "REPLACE_BY_Quantity" \n')
 	for cell in cellID:
-		TOPASSocorerFile.write('s:Sc/Scorer_for_Cell_%s/Quantity = Quantity_for_scoring \n' %(cell))
-		TOPASSocorerFile.write('s:Sc/Scorer_for_Cell_%s/Component = "Cell_lattice" \n' %(cell))
-		TOPASSocorerFile.write('s:Sc/Scorer_for_Cell_%s/OutputType = "Binary" # replace by preferred file format \n' %(cell))
-		TOPASSocorerFile.write('s:Sc/Scorer_for_Cell_%s/OutputFile = "Output_for_Cell_%s" \n' %(cell,cell))
-		TOPASSocorerFile.write('s:Sc/Scorer_for_Cell_%s/IfOutputFileAlreadyExists = "Overwrite" \n' %(cell))
-		TOPASSocorerFile.write('sv:Sc/Scorer_for_Cell_%s/OnlyIncludeIfInMaterial = 1 "Cell_%s" \n\n' %(cell,cell))
+		TOPASScorerFile.write('s:Sc/Scorer_for_Cell_%s/Quantity = Quantity_for_scoring \n' %(cell))
+		TOPASScorerFile.write('s:Sc/Scorer_for_Cell_%s/Component = "Cell_lattice" \n' %(cell))
+		TOPASScorerFile.write('s:Sc/Scorer_for_Cell_%s/OutputType = "Binary" # replace by preferred file format \n' %(cell))
+		TOPASScorerFile.write('s:Sc/Scorer_for_Cell_%s/OutputFile = "Output_for_Cell_%s" \n' %(cell,cell))
+		TOPASScorerFile.write('s:Sc/Scorer_for_Cell_%s/IfOutputFileAlreadyExists = "Overwrite" \n' %(cell))
+		TOPASScorerFile.write('sv:Sc/Scorer_for_Cell_%s/OnlyIncludeIfInMaterial = 1 "Cell_%s" \n\n' %(cell,cell))
+	
+	TOPASScorerFile.close()
+	"""
 
-	TOPASSocorerFile.close()
+	"""
 	TOPASGeometryFile = open("TOPASGeometryFile.txt",'w')
 
 	TOPASGeometryFile.write('# scorers for each cell \n')
@@ -73,6 +77,7 @@ def createTOPASFiles(inFileName,outFileName,dimensions):
 		TOPASGeometryFile.write('s:Ma/Cell_%s/DefaultColor = Ma/Cell_%s/DefaultColor \n\n' %(cell,cellID[0]))
 	
 	TOPASGeometryFile.close()
+	"""
 	
 	cellLattice = np.zeros([DimZ, DimY, DimX])
 	for cell in cells:
