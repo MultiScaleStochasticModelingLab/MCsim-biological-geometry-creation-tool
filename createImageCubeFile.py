@@ -1,6 +1,9 @@
 import numpy as np
+from pathlib import Path
 
 def createTOPASFiles(inFileName,outFileName,dimensions):
+
+	outDir = Path(outFileName).parent
 
 	DimX = dimensions[0]; DimY = dimensions[1]; DimZ = dimensions[2]
 
@@ -11,7 +14,7 @@ def createTOPASFiles(inFileName,outFileName,dimensions):
 		cellID.append(cell[0])
 
 	"""
-	TOPASScorerFile = open("TOPASScorerFile.txt",'w')
+	TOPASScorerFile = open("./%s/TOPASScorerFile.txt" %(outDir),'w')
 	
 	TOPASScorerFile.write('# scorers for each cell \n')
 	TOPASScorerFile.write('####################### \n')
@@ -29,8 +32,8 @@ def createTOPASFiles(inFileName,outFileName,dimensions):
 	TOPASScorerFile.close()
 	"""
 
-	"""
-	TOPASGeometryFile = open("TOPASGeometryFile.txt",'w')
+	
+	TOPASGeometryFile = open("./%s/TOPASGeometryFile.txt" %(outDir),'w')
 
 	TOPASGeometryFile.write('# scorers for each cell \n')
 	TOPASGeometryFile.write('####################### \n')
@@ -77,7 +80,7 @@ def createTOPASFiles(inFileName,outFileName,dimensions):
 		TOPASGeometryFile.write('s:Ma/Cell_%s/DefaultColor = Ma/Cell_%s/DefaultColor \n\n' %(cell,cellID[0]))
 	
 	TOPASGeometryFile.close()
-	"""
+	
 	
 	cellLattice = np.zeros([DimZ, DimY, DimX])
 	for cell in cells:
